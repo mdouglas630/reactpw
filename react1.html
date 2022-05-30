@@ -4,71 +4,73 @@
 
 <head>
 
-   <title>Tabela</title>
+    <title>Tabela</title>
 
 </head>
 
 <body>
 
-   <div id="app">
+    <div id="app">
 
 
 
-   </div>
+    </div>
 
 
 
-   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
 
-   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
-   <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin charset="utf-8"></script>
-
-
-
-   <script type="text/babel">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin charset="utf-8"></script>
 
 
 
-      const TabelaBebidas = () => {
-
-         return 
-
-                  <h1>Tabela de Bebidas</h1>
-
-                  <table id="tabela" border="1">
-
-                     <thead>
-
-                        <tr><th>Nome</th><th>Marca</th></tr>
-
-                     </thead>
-
-                     <tbody>
-
-                        <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
-
-                     </tbody>
-
-                  </table>
+    <script type="text/babel">
 
 
 
-      }
+        function TabelaBebidas(){
+            return(
+                <table id="tabela" border="1">
+
+                <thead>
+
+                <tr><th>Nome</th><th>Marca</th></tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
+
+                </tbody>
+
+                </table>
+
+            );
+        } 
+
+        function NomeTabela(){
+            return(<h1>Minha tabela de bebidas</h1>)
+        }
+                  
 
 
 
-      ReactDOM.render(
+        ReactDOM.render(
+            <div>
+                <NomeTabela/>
+                <TabelaBebidas/>
+                </div>
+                
+                ,
 
-         <TabelaBebidas />
-
-         ,
-
-         document.getElementById("app"))
+                document.getElementById("app"))
 
 
 
-   </script>
+    </script>
 
 </body>
 
