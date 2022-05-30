@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>ReceitaReact - Classes</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="libs/babel.js" charset="utf-8"></script>
+
+
+    <script type="text/babel">
+
+
+
+        class TabelaBebidas extends React.Component {
+            render() {
+                return (
+                    <div>
+
+                        <NomeTable titulo="Tabela de Cana"/>
+
+                        <table id="tabela" border="1">
+
+                            <thead>
+
+                                <tr><th>Nome</th><th>Marca</th></tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
+
+                            </tbody>
+
+                        </table>
+                    </div >
+
+                )
+            }
+        }
+
+        class TabelaCarros extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <NomeTable titulo="Tabela de Carros"/>
+                        <table id="tabela" border="1">
+
+                            <thead>
+
+                                <tr><th>Nome</th><th>Marca</th></tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr><td>Gol</td><td>Wolfsvagen</td></tr>
+
+                            </tbody>
+
+                        </table>
+                    </div >
+                )
+            }
+        }
+
+        class NomeTable extends React.Component{
+            render(){
+                return <h1>{this.props.titulo}</h1>
+            }
+        }
+
+
+
+        ReactDOM.render(
+            <div>
+
+                <TabelaBebidas />
+                <TabelaCarros />
+            </div>
+            ,
+
+            document.getElementById("app"))
+
+
+    </script>
+
+</body>
+
+</html>
