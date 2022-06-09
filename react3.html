@@ -41,38 +41,26 @@
 
 
 
-        const TabelaBebidas = ({ titulo, cabecalhos: [cabecalho1, cabecalho2] }) => {
+        const TabelaBebidas = ({ titulo, cabecalhos, body }) => {
 
 
             return (
-
-
                 <div>
-
-
                     <h1>{titulo}</h1>
-
 
                     <table id="tabela" border="1">
 
 
-                        <thead>
+                        <thead> 
 
-
-                            <tr><th>{cabecalho1}</th><th>{cabecalho2}</th></tr>
-
-
+                             
+                                {cabecalhos.map( c => <th>{c}</th>)} 
+                              
                         </thead>
 
-
                         <tbody>
-
-
-                            <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
-
-
+                            {body.map( o=> <tr>{cabecalhos.map(c => <td>{o[c]}</td>)}</tr> )}
                         </tbody>
-
 
                     </table>
 
@@ -85,15 +73,13 @@
 
         }
 
+        const colunas = ["Nome", "Marca"]
 
-
-        const valoresCabecalhos = ["Nome", "Marca"]
-
-
+        const objetos = [{Nome:"iphone",Marca:"Apple"},{Nome:"Pixel",Marca:"Google"}]
         ReactDOM.render(
 
 
-            <TabelaBebidas titulo="minha tabela de cana" cabecalhos={valoresCabecalhos} />
+            <TabelaBebidas titulo="minha tabela de celelares" cabecalhos={["Nome", "Marca"]} body={objetos}/>
 
 
             ,
